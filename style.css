@@ -328,7 +328,7 @@ textarea {
 .slider > .rightarr{
     position: absolute;
     top: 50%;
-    left: 1079px;
+    left: 1080px;
     transform: translate(-50%, -50%);
     max-height: 64px;
     border-radius: 20px 0 0 20px;
