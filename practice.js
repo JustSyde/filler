@@ -52,8 +52,8 @@ $(function(){
             $('.press').css("width", $fontSize*6 + "px");
             $attentionText.css("font-size", $fontSize*2 + "px");
             $attentionText.css("max-width", (($fontSize*50)/1.22)  + "px");
-            $attentionText.css("padding-top", (($fontSize*50)/18.33)  + "px");
-            $attentionText.css("padding-bottom", (($fontSize*50)/18.33)  + "px");
+            $attentionText.css("padding-top", (($fontSize*50)/18.33)/2  + "px");
+            $attentionText.css("padding-bottom", (($fontSize*50)/18.33)/2  + "px");
             $('.hold_text').css("max-height", (($fontSize*50)/3.28)  + "px");
         }
     });
