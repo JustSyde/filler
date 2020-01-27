@@ -35,13 +35,13 @@ $(function(){
     $(window).on('load', function(){
         $slides.css("margin-left", "0px");
         $counter = 1;
-        $screenWidth = $(window).width();
+        $screenWidth = $("body").prop("scrollWidth");
     });
 
     $(window).on('resize', function(){
         $slides.css("margin-left", "0px");
         $counter = 1;
-        $screenWidth = $(window).width();
+        $screenWidth = $("body").prop("scrollWidth");
     });
 
 
