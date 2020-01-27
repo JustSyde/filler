@@ -32,11 +32,10 @@ $(function(){
     var $numberOfImages = 6;
     var $screenWidth = $('.screenWidth');
 
-    $(window).on('load', function(){
-        $slides.css("margin-left", "0px");
-        $counter = 1;
-        $screenWidth = $("body").prop("scrollWidth");
-    });
+
+    $slides.css("margin-left", "0px");
+    $counter = 1;
+    $screenWidth = $("body").prop("scrollWidth");
 
     $(window).on('resize', function(){
         $slides.css("margin-left", "0px");
