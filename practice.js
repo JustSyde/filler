@@ -50,7 +50,7 @@ $(function(){
             $('.press1').css("width", $fontSize*12 + "px")
             $('.press').css("width", $fontSize*6 + "px");
             $('.attention_text').css("font-size", $fontSize*2 + "px");
-            $('.attention_text').css("width", $screenWidth-200 + "px");
+            $('.attention_text').css("width", $screenWidth-18.18% + "px");
         }
     });
 
