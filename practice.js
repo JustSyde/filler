@@ -31,7 +31,8 @@ $(function(){
     var $imgWidth = 1100;
     var $numberOfImages = 6;
     var $screenWidth = $('.screenWidth');
-
+    var $fontSize = $screenWidth / 50;
+    var $h5f = $text1.find("h5");
 
     $slides.css("margin-left", "0px");
     $counter = 1;
@@ -41,6 +42,16 @@ $(function(){
         $slides.css("margin-left", "0px");
         $counter = 1;
         $screenWidth = $("body").prop("scrollWidth");
+        $fontSize = $screenWidth / 50;
+        if ($screenWidth<1100){
+            $text.css("font-size", $fontSize + "px");
+            $text1.css("font-size", $fontSize+$fontSize/2 + "px");
+            $('.press1').css("font-size", $fontSize+$fontSize/2 + "px");
+            $('.press1').css("width", $fontSize*12 + "px")
+            $('.press').css("width", $fontSize*6 + "px");
+            $('.attention_text').css("font-size", $fontSize*2 + "px");
+            $('.attention_text').css("width", $screenWidth-200 + "px");
+        }
     });
 
 

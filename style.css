@@ -31,7 +31,7 @@ body > .bg_img {
 }
 
 nav {
-    background-color: #475732bf;
+    background-color: hsla(86, 27%, 27%, 0.75);
     padding: 5px 100px;
     width: 100vw;
     max-width:100%;
@@ -212,18 +212,18 @@ textarea {
 .bg_img > .displayer > .overlay > .text {
     white-space: nowrap;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     position: absolute;
-    overflow: hidden;
+    text-align: left;
     top: 50%;
-    left: 50%;
+    left: 45%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
 
 .bg_img > .displayer > .overlay > .text1 {
     color: white;
-    font-size: 30px;
+    font-size: 33px;
     padding: 20px 80px;
     line-height: 3;
 }
@@ -242,7 +242,15 @@ textarea {
     display: none;
     overflow: auto;
     -ms-overflow-style: none;
+    scrollbar-width: 0;
 }
+
+:-moz-any(#content,#appcontent) browser{
+    margin-right:-14px!important;
+    overflow-y:scroll;
+    margin-bottom:-14px!important;
+    overflow-x:scroll;
+   }
 
 .bg_img > .displayer:hover > img{
     height: 100%;
@@ -258,7 +266,7 @@ textarea {
 
 .hold_text > .attention_text {
     margin: 0 auto;
-    font-size: 40px;
+    font-size: 44px;
     text-align: center;
     padding: 60px 0;
     font-weight: bold;
@@ -287,7 +295,7 @@ textarea {
 .press {
     background-color: rgba(0, 65, 186, 0.329);
     border-radius: 4px;
-    width: 116px;
+    width: 124px;
     padding:4px;
 }
 
@@ -356,6 +364,16 @@ textarea {
 }
 
 @media screen and (max-width: 1100px) {
+    .bg_img > .displayer > .overlay > .text {
+        white-space: nowrap;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
     .screenWidth {
         max-width: 100vw;
     }
@@ -367,23 +385,6 @@ textarea {
     .nib {
         display:block;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     
     nav {
         background-color: #475732bf;
@@ -396,6 +397,7 @@ textarea {
     .middle {
         margin: auto;
         width: fit-content;
+        padding-bottom: 4px;
     }
     
     nav > .middle > .left {
@@ -429,6 +431,15 @@ textarea {
         font-size: 22px;
     }
     
+    .bg_img > .displayer > .overlay > .text {
+        white-space: nowrap;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
 
     .middle {
         margin: auto;
