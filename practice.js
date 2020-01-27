@@ -32,6 +32,8 @@ $(function(){
     var $numberOfImages = 6;
     var $screenWidth = $('.screenWidth');
     var $fontSize = $screenWidth / 50;
+    var $attentionText = $('.attention_text');
+    var $press1 = $('.press1');
 
     $slides.css("margin-left", "0px");
     $counter = 1;
@@ -45,11 +47,13 @@ $(function(){
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
             $text1.css("font-size", $fontSize+$fontSize/2 + "px");
-            $('.press1').css("font-size", $fontSize+$fontSize/2 + "px");
-            $('.press1').css("width", $fontSize*12 + "px")
+            $press1.css("font-size", $fontSize+$fontSize/2 + "px");
+            $press1.css("width", $fontSize*12 + "px")
             $('.press').css("width", $fontSize*6 + "px");
-            $('.attention_text').css("font-size", $fontSize*2 + "px");
-            $('.attention_text').css("max-width", (($fontSize*50)/1.22)  + "px");
+            $attentionText.css("font-size", $fontSize*2 + "px");
+            $attentionText.css("max-width", (($fontSize*50)/1.22)  + "px");
+            $attentionText.css("padding-top", (($fontSize*50)/18.33)  + "px");
+            $('.hold_text').css("max-height", (($fontSize*50)/3.28)  + "px");
         }
     });
 
