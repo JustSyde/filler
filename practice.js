@@ -54,6 +54,7 @@ $(function(){
         }
     });
 
+    $(window).trigger('resize');
 
     $right.on('click', function(){
         console.log('Counter:       ' + $counter);
