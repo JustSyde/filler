@@ -26,16 +26,38 @@ $(function(){
 
     var $chk = 1;
 
-    $('.threeLines').on('click', function(){
+    $('.threeX').on('click', function(){
         if ($chk == 1){
             $('.hmhm').addClass('menuUL');
             $('.hmhm').css('display', 'block');
             $('html').addClass('scrollNo');
+            $('.threeLines').css('display', 'none');
+            $('.threeX').css('display', 'block');
             $chk=2;
         }else{
             $('.hmhm').removeClass('menuUL');
             $('.hmhm').css('display', 'none');
             $('html').removeClass('scrollNo');
+            $('.threeLines').css('display', 'block');
+            $('.threeX').css('display', 'none');
+            $chk=1;
+        }
+    })
+
+    $('.threeLines').on('click', function(){
+        if ($chk == 1){
+            $('.hmhm').addClass('menuUL');
+            $('.hmhm').css('display', 'block');
+            $('html').addClass('scrollNo');
+            $('.threeLines').css('display', 'none');
+            $('.threeX').css('display', 'block');
+            $chk=2;
+        }else{
+            $('.hmhm').removeClass('menuUL');
+            $('.hmhm').css('display', 'none');
+            $('html').removeClass('scrollNo');
+            $('.threeLines').css('display', 'block');
+            $('.threeX').css('display', 'none');
             $chk=1;
         }
     })
@@ -61,6 +83,7 @@ $(function(){
         $fontSize = $screenWidth / 50;
         $chk=1;
         $('html').removeClass('scrollNo');
+        $('.threeX').css('display', 'none');
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
             $text1.css("font-size", $fontSize+$fontSize/2 + "px");
@@ -77,15 +100,18 @@ $(function(){
         if ($screenWidth>=685){
             $('.hmhm').removeClass('menuUL');
             $('.hmhm').css('display', 'flex');
+            $('.threeLines').css('display', 'none');
             $chk=1;
         }
 
         if ($screenWidth<=684){
             $('.hmhm').css('display', 'none');
+            $('.threeLines').css('display', 'block');
         }
 
         if ($screenWidth<=390){
             $('.hmhm').css('display', 'none');
+            $('.threeLines').css('display', 'block');
         }
         
     });
