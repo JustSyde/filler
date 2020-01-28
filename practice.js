@@ -36,12 +36,12 @@ $(function(){
 
     $slides.css("margin-left", "0px");
     $counter = 1;
-    $screenWidth = $(window).outerWidth()+1;
+    $screenWidth = $(window).outerWidth();
 
     $(window).on('resize', function(){
         $slides.css("margin-left", "0px");
         $counter = 1;
-        $screenWidth = $(window).outerWidth()+1;
+        $screenWidth = $(window).outerWidth();
         $fontSize = $screenWidth / 50;
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
