@@ -54,7 +54,7 @@ nav > .middle > .left > a > img {
 
 nav > .middle > .left > a {
     text-decoration-style: double;
-    text-decoration-color: #7c7c7c;
+    text-decoration-color: hsl(0, 0%, 49%);
     color: white;
     font-size: 36px; 
 }
@@ -101,7 +101,7 @@ nav > .middle > .right > ul > li > .current_page{
     color: white;
     font-weight: bold;
     padding:5px;
-    background-color: #313131;
+    background-color: hsl(0, 0%, 19%);
     border-radius: 6px;
     font-weight: 400;
 }
@@ -333,6 +333,8 @@ textarea {
     list-style-type: none;
 }
 
+
+
 .slider > .rightarr{
     position: absolute;
     top: 50%;
@@ -349,6 +351,21 @@ textarea {
     transform: translate(-50%, -50%);
     max-height: 64px;
     border-radius: 0 20px 20px 0;
+}
+
+.slider > .rightHalf{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+.slider > .leftHalf{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
 }
 
 .slider > img{
@@ -398,7 +415,7 @@ textarea {
     }
     
     nav {
-        background-color: #475732bf;
+        background-color: hsla(86, 27%, 27%, 0.749);
         padding: 5px 100px;
         width: 100vw;
         max-width:100%;
@@ -550,7 +567,7 @@ textarea {
         width: 100%;
         height: 100%;
         transition: .5s ease;
-        line-height: 26vh;
+        line-height: 24vh;
     }
 
     .threeX {

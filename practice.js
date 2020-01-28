@@ -63,8 +63,8 @@ $(function(){
     })
 
     var $slides = $('.slides');
-    var $left = $('.leftarr');
-    var $right = $('.rightarr');
+    var $left = $('.leftHalf');
+    var $right = $('.rightHalf');
     var $counter = 1;
     var $numberOfImages = 6;
     var $screenWidth = $('.screenWidth');
