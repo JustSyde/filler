@@ -28,7 +28,6 @@ $(function(){
     var $left = $('.leftarr');
     var $right = $('.rightarr');
     var $counter = 1;
-    var $imgWidth = 1100;
     var $numberOfImages = 6;
     var $screenWidth = $('.screenWidth');
     var $fontSize = $screenWidth / 50;
@@ -37,12 +36,12 @@ $(function(){
 
     $slides.css("margin-left", "0px");
     $counter = 1;
-    $screenWidth = $("body").prop("scrollWidth");
+    $screenWidth = $(window).outerWidth()+1;
 
     $(window).on('resize', function(){
         $slides.css("margin-left", "0px");
         $counter = 1;
-        $screenWidth = $("body").prop("scrollWidth");
+        $screenWidth = $(window).outerWidth()+1;
         $fontSize = $screenWidth / 50;
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
@@ -56,6 +55,7 @@ $(function(){
             $attentionText.css("padding-bottom", (($fontSize*50)/18.33)/2  + "px");
             $('.hold_text').css("max-height", (($fontSize*50)/3.28)  + "px");
         }
+        
     });
 
     $(window).trigger('resize');
@@ -74,6 +74,7 @@ $(function(){
             $counter++;
         }
        });
+       
     $left.on('click', function(){
         console.log('Counter:       ' + $counter);
         console.log('Screen Width:  ' + $screenWidth);
@@ -86,8 +87,8 @@ $(function(){
         } else {
             if ($screenWidth >= 1100){
                 $screenWidth = 1100;
-                }
-            $slides.css("margin-left", "-" + $screenWidth*($counter-2) + "px");
+            }
+            $slides.css("margin-left", "-" + $screenWidth * ($counter-2) + "px");
             $counter--;
         }
     });
