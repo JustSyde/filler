@@ -24,6 +24,20 @@ $(function(){
         $overlay.css("background-color", "rgba(0, 139, 186, 0.75)");
     });
 
+    var $chk = 1;
+
+    $('.threeLines').on('click', function(){
+        if ($chk == 1){
+            $('.hmhm').addClass('menuUL');
+            $('.hmhm').css('display', 'block');
+            $chk=2;
+        }else{
+            $('.hmhm').removeClass('menuUL');
+            $('.hmhm').css('display', 'none');
+            $chk=1;
+        }
+    })
+
     var $slides = $('.slides');
     var $left = $('.leftarr');
     var $right = $('.rightarr');
@@ -43,6 +57,7 @@ $(function(){
         $counter = 1;
         $screenWidth = $(window).outerWidth();
         $fontSize = $screenWidth / 50;
+        $chk=1;
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
             $text1.css("font-size", $fontSize+$fontSize/2 + "px");
@@ -54,6 +69,20 @@ $(function(){
             $attentionText.css("padding-top", (($fontSize*50)/18.33)/2  + "px");
             $attentionText.css("padding-bottom", (($fontSize*50)/18.33)/2  + "px");
             $('.hold_text').css("max-height", (($fontSize*50)/3.28)  + "px");
+        }
+
+        if ($screenWidth>=685){
+            $('.hmhm').removeClass('menuUL');
+            $('.hmhm').css('display', 'flex');
+            $chk=1;
+        }
+
+        if ($screenWidth<=684){
+            $('.hmhm').css('display', 'none');
+        }
+
+        if ($screenWidth<=390){
+            $('.hmhm').css('display', 'none');
         }
         
     });
