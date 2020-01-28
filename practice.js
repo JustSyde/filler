@@ -30,10 +30,12 @@ $(function(){
         if ($chk == 1){
             $('.hmhm').addClass('menuUL');
             $('.hmhm').css('display', 'block');
+            $('html').addClass('scrollNo');
             $chk=2;
         }else{
             $('.hmhm').removeClass('menuUL');
             $('.hmhm').css('display', 'none');
+            $('html').removeClass('scrollNo');
             $chk=1;
         }
     })
@@ -58,6 +60,7 @@ $(function(){
         $screenWidth = $(window).outerWidth();
         $fontSize = $screenWidth / 50;
         $chk=1;
+        $('html').removeClass('scrollNo');
         if ($screenWidth<1100){
             $text.css("font-size", $fontSize + "px");
             $text1.css("font-size", $fontSize+$fontSize/2 + "px");
