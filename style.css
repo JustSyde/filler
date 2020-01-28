@@ -479,7 +479,7 @@ textarea {
         left: 0;
         right: 0;
         top: 111px;
-        background-color: #475732bf;
+        background-color: hsla(86, 27%, 27%, 0.90);
         overflow: hidden;
         width: 100%;
         height: 100%;
@@ -510,7 +510,7 @@ textarea {
         line-height: 16px;
         display: block;
         cursor: pointer;
-        padding-right: 30px;
+        margin-right: -14px;
     }
 
     .threeLines {
