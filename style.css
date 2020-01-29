@@ -31,7 +31,7 @@ body > .bg_img {
 }
 
 nav {
-    background-color: hsla(86, 27%, 27%, 0.75);
+    background-color: rgba(50, 87, 67, 0.749);
     padding: 5px 0;
     width: 100vw;
     max-width:100%;
@@ -203,7 +203,8 @@ textarea {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 139, 186, 0.75);
+    background: rgb(0,139,186);
+    background: linear-gradient(90deg, rgba(0,139,186,0.75) 0%, rgba(0,139,186,0.5) 75%, rgba(0,139,186,0.25) 100%);
     overflow: hidden;
     width: 0;
     height: 100%;
@@ -527,7 +528,8 @@ textarea {
         line-height: 16px;
         display: block;
         cursor: pointer;
-        margin-right: -14px;
+        margin-right: 34px;
+        padding-top: 4px;
     }
 
     .threeLines {
@@ -543,7 +545,7 @@ textarea {
     
 }
 
-@media screen and (max-width: 433px) {
+@media screen and (max-width: 416px) {
 
     .threeLines {
         margin-top: -92px;
@@ -577,11 +579,22 @@ textarea {
         line-height: 16px;
         display: block;
         cursor: pointer;
-        padding-right: 45px;
     }
 }
 
+@media screen and (max-width: 432px) {
 
+    .threeLines {
+        margin-top: -92px;
+        color: white;
+        font-size: 120px;
+        line-height: 16px;
+        display: block;
+        cursor: pointer;
+        padding-right: 20px;
+    }
+
+}
 
 
 

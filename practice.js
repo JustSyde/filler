@@ -9,19 +9,21 @@ $(function(){
     $readMore.on('click', function(){
         $text.hide();
         $text1.show();
-        $overlay.css("background-color", "rgba(0, 107, 62, 0.75)");
+        $overlay.css("background", "rgba(0, 107, 62, 0.75)");
     })
 
     $readLess.on('click', function(){
         $text1.hide();
         $text.show();
-        $overlay.css("background-color", "rgba(0, 139, 186, 0.75)");
+        $overlay.css("background", "rgb(0,139,186)");
+        $overlay.css("background", "linear-gradient(90deg, rgba(0,139,186,0.75) 0%, rgba(0,139,186,0.5) 75%, rgba(0,139,186,0.25) 100%)");
     })
 
     $overlay.mouseleave(function(){
         $text1.hide();
         $text.show();
-        $overlay.css("background-color", "rgba(0, 139, 186, 0.75)");
+        $overlay.css("background", "rgb(0,139,186)");
+        $overlay.css("background", "linear-gradient(90deg, rgba(0,139,186,0.75) 0%, rgba(0,139,186,0.5) 75%, rgba(0,139,186,0.25) 100%)");
     });
 
     var $chk = 1;
@@ -151,5 +153,68 @@ $(function(){
         }
     });
 
+    var $sliderLoop = setInterval(function(){
+        console.log('Counter:       ' + $counter);
+        console.log('Screen Width:  ' + $screenWidth);
+        if ($counter==$numberOfImages){
+            $slides.css("margin-left", "0px");
+            $counter = 1;
+        } else {
+            if ($screenWidth >= 1100){
+                $screenWidth = 1100;
+            }
+            $slides.css("margin-left", "-" + $screenWidth*$counter + "px");
+            $counter++;
+        }
+    }, 3000);
 
+    var $m = 1;
+
+    $sliderLoop;
+    
+    $right.hover(function(){
+    if ($m==1){
+        clearInterval($sliderLoop);
+        console.log($m++);
+    }else{
+        $sliderLoop = setInterval(function(){
+            console.log('Counter:       ' + $counter);
+            console.log('Screen Width:  ' + $screenWidth);
+            if ($counter==$numberOfImages){
+                $slides.css("margin-left", "0px");
+                $counter = 1;
+            } else {
+                if ($screenWidth >= 1100){
+                    $screenWidth = 1100;
+                }
+                $slides.css("margin-left", "-" + $screenWidth*$counter + "px");
+                $counter++;
+            }
+        }, 3000);
+        console.log($m--);
+    }
+    });
+
+    $left.hover(function(){
+        if ($m==1){
+            clearInterval($sliderLoop);
+            console.log($m++);
+        }else{
+            $sliderLoop = setInterval(function(){
+                console.log('Counter:       ' + $counter);
+                console.log('Screen Width:  ' + $screenWidth);
+                if ($counter==$numberOfImages){
+                    $slides.css("margin-left", "0px");
+                    $counter = 1;
+                } else {
+                    if ($screenWidth >= 1100){
+                        $screenWidth = 1100;
+                    }
+                    $slides.css("margin-left", "-" + $screenWidth*$counter + "px");
+                    $counter++;
+                }
+            }, 3000);
+            console.log($m--);
+        }
+    });
 });
